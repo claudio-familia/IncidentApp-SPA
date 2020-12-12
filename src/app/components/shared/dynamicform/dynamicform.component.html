@@ -6,7 +6,7 @@
                 <input [type]="item.type" class="form-control" [(ngModel)]="item.value" [ngClass]="(item.class != undefined) ? item.class : ''" [name]="item.name" [id]="item.name" [placeholder]="item.placeholder ? item.placeholder : ''" [value]="item.value ? item.value : ''"
                     [attr.disabled]="item.isDisabled ? '' : null" [required]="item.isRequired">
                 <div class="invalid-feedback" *ngIf="item.hasError">
-                    {{ validationMessage ? validationMessage : 'Campo requerido *' }}.
+                    {{ item.validationMessage ? item.validationMessage : 'Campo requerido *' }}.
                 </div>
             </div>
             <div class="form-group" *ngIf="item.type == 'select'">
@@ -20,7 +20,7 @@
                     </mat-select>
                 </mat-form-field>
                 <div class="invalid-feedback" *ngIf="item.hasError">
-                    {{ validationMessage ? validationMessage : 'Campo requerido *' }}.
+                    {{ item.validationMessage ? item.validationMessage : 'Campo requerido *' }}.
                 </div>
             </div>
         </div>
