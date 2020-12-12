@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const config: any = {
-	ApiUrl: 'http://localhost:5000/api'
+	ApiUrl: 'https://incidentapp-api.herokuapp.com/api'
 };
 
 export class AppSettings {
