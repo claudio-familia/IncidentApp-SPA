@@ -24,7 +24,7 @@ describe('Login process', () => {
     cy.get('input[name=password]').type(validUser.password);
     cy.get('button.btn-login').click();  
     setTimeout(() => {}, 3000);
-    cy.contains('Error al validar')
+    cy.contains('Error al validar').and('be.visible')
   });
 
   it('TryLoginWithInvalidCredentials', () => {
@@ -32,6 +32,6 @@ describe('Login process', () => {
     cy.get('input[name=password]').type("123456789");
     cy.get('button.btn-login').click();
     setTimeout(() => {}, 3000);
-    cy.contains('Error al validar')
+    cy.contains('Error al validar').and('be.visible')
   });
 })
